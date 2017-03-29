@@ -1,0 +1,42 @@
+#map {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.row {
+   display: block;
+}
+
+.tile {
+ display: inline-block;
+ padding: 0;
+ vertical-align: bottom;
+}
+
+.zoom-control {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 4px;
+    padding: 2px;
+}
+.zoom-control button {
+     display: block;
+     margin: 1px;
+     padding: 0;
+     text-align: center;
+     height: 2.375em;
+     width: 2.375em;
+     background-color: rgba(0, 60, 136, 0.5);
+     border: none;
+     overflow: visible;
+     cursor: pointer;
+     color: white;
+     font-size: 1.14em;
+}
+
+.zoom_in .zoom_out {
+    border-radius: 2px 2px 0 0;
+}

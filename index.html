@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Global Tiles</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.10/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div ng-app="global_tiles" ng-controller="tileCtrl">
+        <div id="map" class="map" >
+          <zoom-directive tiles="tiles_array" level="level"></zoom-directive>
+          <div class="row" ng-repeat="obj in tiles_array | orderBy:'row':true">
+            <img class="tile" height="64px" width="64px" ng-repeat="col in obj.cols" ng-src="http://earthx-layers-data.s3.amazonaws.com/LAYDB-44-BlueMarble-data/1325376000000/{{level}}/{{obj.row}}/{{obj.row}}_{{col}}.jpg"/>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
